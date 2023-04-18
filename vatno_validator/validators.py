@@ -1,8 +1,8 @@
 from django.core.exceptions import ValidationError
 from django.core.validators import _lazy_re_compile
 from django.utils.deconstruct import deconstructible
-from django.utils.encoding import force_text
-from django.utils.translation import ugettext_lazy as _
+from django.utils.encoding import force_str
+from django.utils.translation import gettext_lazy as _
 
 
 @deconstructible
@@ -57,7 +57,7 @@ class VATNoValidator(object):
             self.allowed_countries = allowed_countries
 
     def __call__(self, value):
-        value = force_text(value)
+        value = force_str(value)
 
         # Can't be valid
         if len(value) < 2:

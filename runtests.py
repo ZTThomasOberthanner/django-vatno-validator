@@ -12,7 +12,7 @@ try:
                 "ENGINE": "django.db.backends.sqlite3",
             }
         },
-        ROOT_URLCONF="vatno_validator.urls",
+        #ROOT_URLCONF="vatno_validator.urls",
         INSTALLED_APPS=[
             "django.contrib.auth",
             "django.contrib.contenttypes",
